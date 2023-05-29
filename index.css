@@ -20,7 +20,7 @@ body{
     border-radius: 30px;
 }
 nav{
-    position: fixed;
+    position: absolute;
     max-width: 900px;
     margin: auto;
     font-size: 300%;
