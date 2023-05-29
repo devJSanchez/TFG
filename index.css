@@ -37,7 +37,7 @@ nav li{
 
 div{
     background-color: white;
-    margin-top: 40%;
+    margin-top: 30%;
     border-radius: 60%;
 }
 .menuCarta{
@@ -52,4 +52,7 @@ div{
     aside{
         width: 100%;
     }
+}
+a{
+    font-size: 50%;
 }
