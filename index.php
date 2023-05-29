@@ -9,7 +9,7 @@ $parametro3 = $_POST['parametro3'];
 // ...
 
 // Guarda los cambios en el archivo HTML
-$file = 'C:\Users\Jorge\Desktop\TFG\ComeRest_HTML\index.html';
+$file = 'C:\Users\Jorge\Desktop\TFGDAM\Git\TFG\index.html';
 $data = 'Contenido modificado del archivo HTML';
 
 header("Location: index.html?parametro1=$parametro1&parametro2=$parametro2&parametro3=$parametro3");
