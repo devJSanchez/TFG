@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="index.css">
     <title>Carta Come-Rest</title>
     <h1 id="inicio"><img src="plato.jpg" id="icono">Come-Rest </h1> 
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
 </head>
 <body>
     <nav>
@@ -17,14 +20,28 @@
             <li><a href="#">Postres</a></li>
         </ul>
     </nav>
-   
+    <script> //JAVASCRIPT
+        var firebaseConfig = {
+      apiKey: "AIzaSyDmPDU5DA7P7XF7OxsgZ_Gg4cq69jE4IPU",
+      authDomain: "tfg-ad485.firebaseapp.com",
+      projectId: "tfg-ad485"
+    };
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    var collectionRef = db.collection('ID');
+    var docRef = collectionRef.doc('Id');
+    docRef.onSnapshot(function(snapshot) {
+      var data = snapshot.data();
+      document.getElementById('primerPlato').textContent = data.primerPlato;
+    });
+    </script>
 </body>
 <footer>
     <div class="menuCarta">
         <h1>Menú del día</h1>
-        <h1 name="parametro1" id="parametro1">Primer plato</h1>
-        <h1 name="parametro2" id="parametro2">Segundo plato</h1>
-        <h2 name="parametro3" id="parametro3">Precio</h2>
+        <h1 id="primerPlato">Primer plato</h1>
+        <h1 id="#">Segundo plato</h1>
+        <h2 id="#">Precio</h2>
     </div>
 </footer>
 </html>
