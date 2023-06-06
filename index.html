@@ -33,6 +33,8 @@
     docRef.onSnapshot(function(snapshot) {
       var data = snapshot.data();
       document.getElementById('primerPlato').textContent = data.primerPlato;
+      document.getElementById('segundoPlato').textContent = data.segundoPlato;
+      document.getElementById('precio').textContent = data.precio;
     });
     </script>
 </body>
